@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../static/style.css" th:href="@{/style.css}" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper5">
+<div class="mojerecepty">
+    <table>
+        <tr>
+            <th>Numer</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Opis</th>
+            <th>Data</th>
+        </tr>
+        <tr th:each="data, iterstat: ${mois}">
+            <td th:text="${iterstat.index}" th:id="|td${iterstat.index}|"></td>
+            <td th:text="${data.name}" th:id="|td${iterstat.index}|"></td>
+            <td th:text="${data.surname}" th:id="|td${iterstat.index}|"></td>
+            <td th:text="${data.visitNote}" th:id="|td${iterstat.index}|"></td>
+            <td th:text="${data.date}" th:id="|td${iterstat.index}|"></td>
+        </tr>
+    </table>
+
+</div>
+ <div class="back1">
+    <a th:href="@{/main2.html}" class="Powrót">Powrót</a>
+   </div>
+</div>
+</body>
+</body>
+</html>

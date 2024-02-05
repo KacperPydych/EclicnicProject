@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <form action="index.html">
+        <h1>Rejestracja</h1>
+        <div class="input-box" >
+            <input type="text" placeholder="E-mail" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box" >
+            <input type="text" placeholder="Login" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Imię" required>
+            <i class='bx bxs-user' ></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Nazwisko" required>
+            <i class='bx bxs-user' ></i>
+        </div>
+        <div class="input-box">
+            <input type="date" placeholder="Data urodzenia" required>
+            <i class='bx bxs-time'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Nr tel" required>
+            <i class='bx bxs-phone-call'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Pesel" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Hasło" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <button type="submit" class="btn"> Rejestruj </button>
+    </form>
+
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                email: form.querySelector('input[placeholder="E-mail"]').value,
+                login: form.querySelector('input[placeholder="Login"]').value,
+                name: form.querySelector('input[placeholder="Imię"]').value,
+                surname: form.querySelector('input[placeholder="Nazwisko"]').value,
+                dateOfBirth: form.querySelector('input[placeholder="Data urodzenia"]').value,
+                number: form.querySelector('input[placeholder="Nr tel"]').value,
+                pesel: form.querySelector('input[placeholder="Pesel"]').value,
+                password: form.querySelector('input[placeholder="Hasło"]').value,
+            };
+
+            // Wysyłanie danych do API
+            fetch('api/postUser', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(data => {
+                    console.log(data);
+                    window.location.href = 'index.html';
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper2">
+    <h1 id="Witaj">Menu</h1>
+    <div style="clear: both;"></div>
+    <div class="back">
+        <a href="index.html" class="back">Wyloguj</a>
+    </div>
+    <div class="kwa1"><a href="wizyty.html">Zarejestruj wizytę</a>
+        <i class='bx bxs-time'></i>
+    </div>
+    <div class="kwa2">
+        <button onclick="pokazDane()">Moje konto</button>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+
+<script>
+    function pokazDane() {
+        fetch('/api/pokazDane', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log(data);
+
+                alert("Twoja wizyta: " + data);
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+                // Obsługa błędów
+            });
+    }
+</script>
+</body>
+</html>

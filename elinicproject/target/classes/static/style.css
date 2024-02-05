@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background: rgb(13, 166, 208);
+    background: url(tlo3.jpg) no-repeat;
+}
+
+.wrapper {
+    width: 420px;
+    background-color: rgb(11, 100, 178);
+    color: wheat;
+    border-radius: 20px;
+    padding: 30px 40px;
+
+}
+
+.wrapper h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+
+}
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.wrapper .register{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register p a::hover{
+    text-decoration: underline;
+}
+
+.wrapper2 {
+    width: 1000px;
+    color: wheat;
+    border-radius: 20px;
+    float: left;
+
+}
+
+.wrapper2 .kwa1{
+    padding-top: 75px;
+    margin: 10px;
+    width: 475px;
+    height: 250px;
+    background-color: #1872d2;
+    float: left;
+    font-size: 70px;
+    text-align: center;
+
+    
+}
+.wrapper2 .kwa2{
+    padding-top: 75px;
+    margin: 10px;
+    width: 475px;
+    height: 250px;
+    background-color: #21afcc;
+    float: left;
+    font-size: 70px;
+    text-align: center;
+}
+.wrapper2 .kwa3{
+    padding-top: 75px;
+    margin: 10px;
+    width: 475px;
+    height: 250px;
+    background-color: #21afcc;
+    color: #fff;
+    float: left;
+    font-size: 70px;
+    text-align: center;
+}
+.wrapper2 .kwa4{
+    
+    margin: 10px, 10px, 10px, 10px;
+    width: 475px;
+    height: 250px;   
+    float: left;
+    font-size: 70px;
+    text-align: center;
+    
+}
+.wrapper2 #Witaj{
+    font-size: 100px;
+    text-align: center;
+    color: rgb(15, 121, 192);
+}
+
+.wrapper3 {
+    width: 420px;
+    background-color: rgb(11, 100, 178);
+    color: wheat;
+    border-radius: 20px;
+    padding: 30px 40px;
+    float: left;
+
+}
+.wrapper3 h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.wrapper3 .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box3 input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box3 input::placeholder{
+    color: #fff;
+
+}
+.input-box3 i {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper3 .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.mojewizyty {
+    width: 420px;
+    height: 310px;
+    background-color: rgb(11, 100, 178);
+    color: wheat;
+    border-radius: 20px;
+    padding: 30px 40px;
+    float: left;
+    margin-left: 10px;
+
+}
+.mojewizyty .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+.wrapper4 {
+    width: 420px;
+    height: 310px;
+    background-color: rgb(11, 100, 178);
+    color: wheat;
+    border-radius: 20px;
+    padding: 30px 40px;
+    float: left;
+
+}
+
+.wrapper4 .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper5 {
+    width: 500px;
+    height: fit-content;
+    background-color: rgb(11, 100, 178);
+    color: wheat;
+    border-radius: 20px;
+    padding: 30px 40px;
+    float: left;
+
+}
+
+.wrapper5 .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper2 .settings{
+    margin: 10px;
+    width: 216px;
+    height: 115px;
+    background-color: #3c4041;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+}
+.wrapper2 .FB{
+   
+    margin: 10px;
+    width: 216px;
+    height: 115px;
+    background-color: #181bd2;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+}
+.wrapper2 .YT{
+    
+    margin: 10px;
+    width: 216px;
+    height: 115px;
+    background-color: #cc0f0f;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+}
+
+.wrapper2 .IG{
+    margin: 10px;
+    width: 216px;
+    height: 115px;
+    background-color: #cc18d2;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+
+.back{
+    width: 110px;
+    height: 50px;
+    /* background-color: rgb(11, 100, 178); */
+    font-size: center;
+    font-size: 35px;
+    color: red;
+    padding-left: 430px;
+}
+.back1{
+    height: 50px;
+    font-size: center;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+
+.back2{
+    width: 110px;
+    height: 50;
+    font-size: center;
+    font-size: 30px;
+    padding-top:30px ;
+    padding-left: 130px;
+}
+

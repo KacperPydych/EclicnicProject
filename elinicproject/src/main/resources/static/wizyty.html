@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper3">
+    <form id="appointmentForm">
+        <h1>Umów wizytę</h1>
+        <div class="input-box">
+            <input type="date" placeholder="Data" id="dateInput">
+            <i class='bx bxs-time'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Powód" id="reasonInput">
+            <i class='bx bxs-injection'></i>
+            <button type="button" class="btn" onclick="callJavaMethod()">Umów</button>
+        </div>
+    </form>
+
+    <div class="back2">
+        <a href="main2.html" class="Powrót">Powrót</a>
+    </div>
+</div>
+<script>
+    function callJavaMethod() {
+
+        const date = document.getElementById('dateInput').value;
+        const reason = document.getElementById('reasonInput').value;
+
+
+        const user = {
+            dataWizyty: date,
+            powod: reason
+        };
+
+
+        fetch('/api/postVisit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+
+            .then(user => {
+                console.log('Button clicked!');
+                console.log('Odpowiedź od API:', user);
+                alert("Wizyta została umówiona");
+
+
+                window.location.href = 'main2.html';
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+
+            });
+    }
+</script>
+</body>
+</html>
